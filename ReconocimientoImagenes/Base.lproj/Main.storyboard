@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReconocimientoImagenes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cuatro" translatesAutoresizingMaskIntoConstraints="NO" id="Eax-Md-UqW">
+                                <rect key="frame" x="20" y="44" width="374" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="m00-57-Grg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6G-Tb-7ho">
+                                <rect key="frame" x="20" y="347" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hoh-PK-7dB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfv-O2-Jv0">
+                                <rect key="frame" x="20" y="832" width="31" height="30"/>
+                                <state key="normal" title="Foto"/>
+                                <connections>
+                                    <action selector="fotoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYH-jT-MUx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmf-vw-xM2">
+                                <rect key="frame" x="342" y="832" width="52" height="30"/>
+                                <state key="normal" title="Carrete"/>
+                                <connections>
+                                    <action selector="carreteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NPu-lR-S6Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Eax-Md-UqW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1HB-uf-TTl"/>
+                            <constraint firstItem="jmf-vw-xM2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3te-GG-oFO"/>
+                            <constraint firstItem="c6G-Tb-7ho" firstAttribute="top" secondItem="Eax-Md-UqW" secondAttribute="bottom" constant="35" id="9ia-yE-R9y"/>
+                            <constraint firstItem="Cfv-O2-Jv0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FAb-Lg-p7q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jmf-vw-xM2" secondAttribute="trailing" constant="20" id="Itk-op-4vY"/>
+                            <constraint firstItem="Cfv-O2-Jv0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OFu-WW-5Xu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eax-Md-UqW" secondAttribute="trailing" constant="20" id="TfB-fY-A8u"/>
+                            <constraint firstItem="c6G-Tb-7ho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ltY-ao-em2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c6G-Tb-7ho" secondAttribute="trailing" constant="20" id="mKQ-gD-xXj"/>
+                            <constraint firstItem="Eax-Md-UqW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mg0-dI-73A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagen" destination="Eax-Md-UqW" id="Mip-FN-4ZR"/>
+                        <outlet property="texto" destination="c6G-Tb-7ho" id="WOs-YZ-gAp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cuatro" width="1920" height="1080"/>
+    </resources>
+</document>
